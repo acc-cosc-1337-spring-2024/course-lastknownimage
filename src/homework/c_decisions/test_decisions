@@ -1,0 +1,32 @@
+import unittest
+from decisions import get_options_ratio
+
+class TestGetOptionsRatio(unittest.TestCase):
+    def test_ratio_calculation(self):
+        self.assertAlmostEqual(get_options_ratio(1, 10), 0.1)
+        self.assertEqual(get_options_ratio(2, 0), 0)
+
+if __name__ == 'main':
+    unittest.decisions()
+
+import unittest
+from src.homework.c_decisions.decisions import get_options_ratio
+from src.homework.c_decisions.decisions import get_faculty_rating
+class Test_Config(unittest.TestCase):
+    def test_get_options_ratio_a(self):
+        self.assertAlmostEqual(get_options_ratio(2, 20), 0.1)
+    def test_get_options_ratio_b(self):
+        self.assertAlmostEqual(get_options_ratio(5, 10), 0.5)
+    def test_get_faculty_rating_excellent(self):
+        self.assertEqual(get_faculty_rating(0.91), 'excellent!')
+    def test_get_faculty_rating_very_good(self):
+        self.assertEqual(get_faculty_rating(0.89), 'very good.')
+    def test_get_faculty_rating_good(self):
+        self.assertEqual((0.79), 'good.')
+    def test_get_faculty_rating_improve(self):
+        self.assertEqual((0.69), 'needs improvement.')
+    def test_get_faculty_rating_unacceptable(self):
+        self.assertEqual((0.49), 'unacceptable.')
+    
+if __name__ == 'main':
+    unittest.test_decisions()
