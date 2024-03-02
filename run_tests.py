@@ -1,9 +1,5 @@
-from src.homework.e_functions.value_return import get_hour, get_minutes, get_seconds
+import unittest
+from tests.homework.h_strings import test_strings
 
-epoch_seconds = 3800
-
-hours = get_hour(epoch_seconds)
-minutes = get_minutes(epoch_seconds)
-seconds = get_seconds(epoch_seconds)
-
-print(f"The time is {hours:02d}:{minutes:02d}:{seconds:02d}")
+if __name__ == '__main__':
+    unittest.main()
