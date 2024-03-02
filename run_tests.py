@@ -1,5 +1,4 @@
 import unittest
-from tests.homework.h_strings import test_strings
+from tests.homework.h_strings import tests_strings
 
-if __name__ == '__main__':
-    unittest.main()
+suite = unittest.TestLoader().loadTestsFromModule(tests_strings)
